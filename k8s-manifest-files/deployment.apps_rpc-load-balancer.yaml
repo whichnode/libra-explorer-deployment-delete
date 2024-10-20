@@ -21,7 +21,6 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: rpc-load-balancer
     spec:
