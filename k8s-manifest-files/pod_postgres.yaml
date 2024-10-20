@@ -23,16 +23,6 @@ spec:
     volumeMounts:
     - mountPath: /var/lib/postgresql/data
       name: pvc
-  serviceAccountName: default
-  tolerations:
-  - effect: NoExecute
-    key: node.kubernetes.io/not-ready
-    operator: Exists
-    tolerationSeconds: 300
-  - effect: NoExecute
-    key: node.kubernetes.io/unreachable
-    operator: Exists
-    tolerationSeconds: 300
   volumes:
   - name: pvc
     persistentVolumeClaim:
