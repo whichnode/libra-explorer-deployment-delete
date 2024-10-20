@@ -26,8 +26,6 @@ spec:
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
       name: kube-api-access-5bb9n
       readOnly: true
-  preemptionPolicy: PreemptLowerPriority
-  priority: 0
   serviceAccountName: default
   tolerations:
   - effect: NoExecute

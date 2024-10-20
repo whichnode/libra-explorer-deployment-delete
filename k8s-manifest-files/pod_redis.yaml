@@ -15,8 +15,6 @@ spec:
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
       name: kube-api-access-fxkrj
       readOnly: true
-  preemptionPolicy: PreemptLowerPriority
-  priority: 0
   serviceAccountName: default
   tolerations:
   - effect: NoExecute
