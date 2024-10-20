@@ -7,9 +7,6 @@ spec:
   clusterIP: 10.43.186.217
   clusterIPs:
   - 10.43.186.217
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
   - name: clickhouse
     port: 9000

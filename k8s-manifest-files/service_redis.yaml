@@ -7,9 +7,6 @@ spec:
   clusterIP: 10.43.226.113
   clusterIPs:
   - 10.43.226.113
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
   - port: 6379
   selector:
