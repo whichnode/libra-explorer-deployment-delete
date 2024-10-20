@@ -4,9 +4,6 @@ metadata:
   name: rpc-load-balancer
   namespace: olfyi-0001
 spec:
-  clusterIP: 10.43.129.96
-  clusterIPs:
-  - 10.43.129.96
   ports:
   - name: http
     port: 80

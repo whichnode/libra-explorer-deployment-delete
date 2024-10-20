@@ -4,9 +4,6 @@ metadata:
   name: explorer-data
   namespace: olfyi-0001
 spec:
-  clusterIP: 10.43.41.163
-  clusterIPs:
-  - 10.43.41.163
   ports:
   - name: http
     port: 80

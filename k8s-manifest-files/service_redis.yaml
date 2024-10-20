@@ -4,9 +4,6 @@ metadata:
   name: redis
   namespace: olfyi-0001
 spec:
-  clusterIP: 10.43.226.113
-  clusterIPs:
-  - 10.43.226.113
   ports:
   - port: 6379
   selector:

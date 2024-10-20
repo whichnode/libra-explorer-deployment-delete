@@ -4,9 +4,6 @@ metadata:
   name: postgres
   namespace: olfyi-0001
 spec:
-  clusterIP: 10.43.173.8
-  clusterIPs:
-  - 10.43.173.8
   ports:
   - port: 5432
   selector:
