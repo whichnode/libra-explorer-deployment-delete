@@ -118,5 +118,4 @@ spec:
       imagePullSecrets:
       - name: docker-config
       restartPolicy: Always
-      schedulerName: default-scheduler
       terminationGracePeriodSeconds: 30
