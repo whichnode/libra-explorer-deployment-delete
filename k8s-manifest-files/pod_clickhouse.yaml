@@ -21,9 +21,6 @@ spec:
       name: pvc
     - mountPath: /etc/clickhouse-server
       name: config
-    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-      name: kube-api-access-2nm9b
-      readOnly: true
   serviceAccountName: default
   tolerations:
   - effect: NoExecute
@@ -46,19 +43,4 @@ spec:
       - key: users
         path: users.xml
       secretName: clickhouse-config
-  - name: kube-api-access-2nm9b
-    projected:
-      sources:
-      - serviceAccountToken:
-          expirationSeconds: 3607
-          path: token
-      - configMap:
-          items:
-          - key: ca.crt
-            path: ca.crt
-          name: kube-root-ca.crt
-      - downwardAPI:
-          items:
-          - fieldRef:
-              fieldPath: metadata.namespace
-            path: namespace
+

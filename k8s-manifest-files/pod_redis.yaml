@@ -11,10 +11,6 @@ spec:
     name: redis
     ports:
     - containerPort: 6379
-    volumeMounts:
-    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-      name: kube-api-access-fxkrj
-      readOnly: true
   serviceAccountName: default
   tolerations:
   - effect: NoExecute
@@ -25,20 +21,3 @@ spec:
     key: node.kubernetes.io/unreachable
     operator: Exists
     tolerationSeconds: 300
-  volumes:
-  - name: kube-api-access-fxkrj
-    projected:
-      sources:
-      - serviceAccountToken:
-          expirationSeconds: 3607
-          path: token
-      - configMap:
-          items:
-          - key: ca.crt
-            path: ca.crt
-          name: kube-root-ca.crt
-      - downwardAPI:
-          items:
-          - fieldRef:
-              fieldPath: metadata.namespace
-            path: namespace

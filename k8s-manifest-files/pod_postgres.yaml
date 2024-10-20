@@ -23,9 +23,6 @@ spec:
     volumeMounts:
     - mountPath: /var/lib/postgresql/data
       name: pvc
-    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-      name: kube-api-access-5bb9n
-      readOnly: true
   serviceAccountName: default
   tolerations:
   - effect: NoExecute
@@ -40,19 +37,4 @@ spec:
   - name: pvc
     persistentVolumeClaim:
       claimName: postgres-data
-  - name: kube-api-access-5bb9n
-    projected:
-      sources:
-      - serviceAccountToken:
-          expirationSeconds: 3607
-          path: token
-      - configMap:
-          items:
-          - key: ca.crt
-            path: ca.crt
-          name: kube-root-ca.crt
-      - downwardAPI:
-          items:
-          - fieldRef:
-              fieldPath: metadata.namespace
-            path: namespace
+
