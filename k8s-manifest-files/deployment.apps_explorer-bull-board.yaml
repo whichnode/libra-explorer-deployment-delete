@@ -48,9 +48,6 @@ spec:
         - containerPort: 80
           name: http
           protocol: TCP
-        terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File
-      dnsPolicy: ClusterFirst
       imagePullSecrets:
       - name: docker-config
       restartPolicy: Always
