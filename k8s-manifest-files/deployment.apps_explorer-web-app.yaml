@@ -21,7 +21,7 @@ spec:
         app: explorer-web-app
     spec:
       containers:
-      - image: ghcr.io/0lnetworkcommunity/explorer/web-app:5449c076e113711e0d6b31ce5876ff51e7b59972
+      - image: ghcr.io/whichnode/whichnode/libra-explorer/web-app:4fb0d591c87c5a70b0fd11dee90ae269feaabd3e
         imagePullPolicy: IfNotPresent
         name: explorer-web-app
         ports:
