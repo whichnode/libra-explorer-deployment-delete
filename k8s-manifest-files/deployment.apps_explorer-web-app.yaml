@@ -34,4 +34,3 @@ spec:
       imagePullSecrets:
       - name: docker-config
       restartPolicy: Always
-      terminationGracePeriodSeconds: 30
